@@ -1,0 +1,218 @@
+/* ==================================== */
+/* CÓDIGO DO HEADER (JÁ ESTAVA AÍ)      */
+/* ==================================== */
+
+/* Primeiro, resetamos algumas configurações padrão do navegador */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Agora, o estilo do nosso cabeçalho */
+.header {
+    background-color: #1c1c1c;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para o nosso logo */
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Estilo para os links da navegação */
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+/* Efeito HOVER: O que acontece quando passamos o mouse em cima dos links */
+.navbar a:hover {
+    color: #ffc107;
+}
+
+/* ================================================================ */
+/* O NOVO CÓDIGO DA SEÇÃO "SOBRE" COMEÇA EXATAMENTE AQUI, DEPOIS    */
+/* DA ÚLTIMA CHAVE '}' DO HEADER                                    */
+/* ================================================================ */
+
+.sobre {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 30px;
+    background-color: #ffffff;
+}
+
+/* Estilo para a caixa da imagem */
+.sobre-imagem img {
+    max-width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Estilo para a caixa do conteúdo de texto */
+.sobre-conteudo {
+    max-width: 600px;
+}
+
+.section-titulo {
+    font-size: 32px;
+    color: #1c1c1c;
+    margin-top: 0;
+}
+
+.sobre-conteudo p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555555;
+}
+/* ==================================== */
+/* ESTILO DA SEÇÃO "SERVIÇOS"           */
+/* ==================================== */
+
+.servicos {
+    padding: 60px 30px;
+    background-color: #f4f4f4; /* Voltamos para o cinza claro */
+    text-align: center; /* Centraliza o título da seção */
+}
+
+.servicos-container {
+    display: flex; /* Flexbox para alinhar os cards */
+    justify-content: center; /* Centraliza os cards no container */
+    flex-wrap: wrap; /* Permite que os cards quebrem para a linha de baixo em telas menores */
+    gap: 30px; /* Espaço entre os cards */
+    margin-top: 40px; /* Espaço entre o título e os cards */
+}
+
+.servico-card {
+    background-color: #ffffff; /* Fundo branco para o card */
+    border: 1px solid #ddd; /* Borda sutil */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 25px;
+    width: 300px; /* Largura fixa para cada card */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08); /* Sombra suave */
+    text-align: left; /* Alinha o texto do card à esquerda */
+    
+    /* Estrutura flex interna do card */
+    display: flex;
+    justify-content: space-between; /* Joga a info para um lado e o preço para o outro */
+    align-items: center; /* Alinha verticalmente */
+
+    transition: transform 0.3s, box-shadow 0.3s; /* Animação suave para o hover */
+}
+
+/* Efeito de hover para o card */
+.servico-card:hover {
+    transform: translateY(-5px); /* Levanta o card um pouquinho */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12); /* Aumenta a sombra */
+}
+
+
+.servico-info h3 {
+    margin: 0 0 8px 0; /* Margem apenas na parte de baixo do h3 */
+    color: #1c1c1c;
+}
+
+.servico-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    max-width: 200px; /* Evita que o texto fique muito largo */
+}
+
+.servico-preco span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #008000; /* Um verde para o preço */
+}
+/* ==================================== */
+/* ESTILO DA SEÇÃO "CONTATO" (FOOTER)   */
+/* ==================================== */
+
+.contato {
+    background-color: #1c1c1c; /* Fundo escuro para o rodapé */
+    color: #f4f4f4; /* Texto claro */
+    padding: 60px 30px;
+}
+
+.contato-container {
+    max-width: 1100px;
+    margin: 0 auto; /* Centraliza o container */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha os itens no topo */
+    gap: 40px;
+    flex-wrap: wrap; /* Permite quebrar a linha em telas menores */
+}
+
+.contato-info, .contato-formulario {
+    flex: 1; /* Faz com que ambos tentem ocupar o mesmo espaço */
+    min-width: 300px; /* Largura mínima antes de quebrar a linha */
+}
+
+.contato-info p {
+    color: #ccc;
+}
+
+.contato-info address {
+    font-style: normal; /* Remove o itálico padrão da tag <address> */
+    line-height: 1.7;
+    color: #ccc;
+}
+
+/* Estilização do Formulário */
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block; /* Faz o label ocupar uma linha inteira */
+    margin-bottom: 8px;
+    color: #f4f4f4;
+}
+
+.form-grupo input,
+.form-grupo textarea {
+    width: 100%; /* Ocupa 100% da largura do container */
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: #f4f4f4;
+    font-size: 16px;
+}
+
+/* Efeito quando o usuário clica no campo */
+.form-grupo input:focus,
+.form-grupo textarea:focus {
+    outline: none; /* Remove a borda padrão do navegador */
+    border-color: #ffc107; /* Adiciona uma borda amarela */
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffc107; /* Cor amarela do tema */
+    color: #1c1c1c;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer; /* Muda o cursor para uma "mãozinha" */
+    transition: background-color 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: #ffda73; /* Um amarelo mais claro no hover */
+}
